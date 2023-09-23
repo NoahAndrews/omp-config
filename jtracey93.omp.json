@@ -41,19 +41,6 @@
           }
         },
         {
-          "type": "spotify",
-          "style": "plain",
-          "foreground": "#ffffff",
-          "background": "#1BD760",
-          "template": " {{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} - {{ .Track }}{{ end }} ",
-          "properties": {
-            "paused_icon": "",
-            "playing_icon": "",
-            "stopped_icon": "",
-            "track_separator": " - "
-          }
-        },
-        {
           "type": "time",
           "style": "diamond",
           "foreground": "#ffffff",
