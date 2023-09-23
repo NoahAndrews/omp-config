@@ -87,6 +87,12 @@
           }
         },
         {
+          "type": "upgrade",
+          "style": "plain",
+          "foreground": "#111111",
+          "background": "#FFD664"
+        },
+        {
           "type": "sysinfo",
           "style": "diamond",
           "foreground": "#3f3f3f",
