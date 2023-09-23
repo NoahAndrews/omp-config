@@ -63,6 +63,21 @@
           "properties": {
             "time_format": "15:04:05"
           }
+        },
+        {
+          "background": "#0095e9",
+          "background_templates": [
+            "{{ if gt .Code 0 }}#ff0044{{ end }}"
+          ],
+          "foreground": "#ffffff",
+          "leading_diamond": "<transparent,background>\ue0b0</>",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "diamond",
+          "template": " \uf0e7 ",
+          "trailing_diamond": "\ue0b4",
+          "type": "status"
         }
       ]
     }
