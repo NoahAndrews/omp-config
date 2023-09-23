@@ -51,6 +51,13 @@
           }
         },
         {
+          "type": "node",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "background": "#6CA35E",
+          "template": "  {{ .Full }} "
+        },
+        {
           "type": "status",
           "style": "diamond",
           "trailing_diamond": "\ue0b0",
