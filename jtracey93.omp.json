@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "style": "diamond",
+          "foreground": "#ffffff",
+          "background": "#EB9654",
+          "leading_diamond": "\ue0b6",
+          "template": "{{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }} ",
+          "properties": {
+            "display_host": false
+          }
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#3f3f3f",
+          "background": "lightYellow",
+          "template": " {{ .Path }} ",
+          "properties": {
+            "style": "full"
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "background": "#25AFF3",
+          "template": " branch ({{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}) ",
+          "properties": {
+            "fetch_status": true
+          }
+        },
+        {
+          "type": "spotify",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "background": "#1BD760",
+          "template": " {{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} - {{ .Track }}{{ end }} ",
+          "properties": {
+            "paused_icon": "",
+            "playing_icon": "",
+            "stopped_icon": "",
+            "track_separator": " - "
+          }
+        },
+        {
+          "type": "time",
+          "style": "diamond",
+          "foreground": "#ffffff",
+          "background": "#cc00ff",
+          "trailing_diamond": "\ue0b0",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "properties": {
+            "time_format": "15:04:05"
+          }
+        }
+      ]
+    }
+  ]
+}
