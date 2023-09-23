@@ -98,7 +98,7 @@
           "foreground": "#3f3f3f",
           "background": "#2ADF4E",
           "trailing_diamond": "\ue0b4",
-          "template": " \ue79d {{ mulf .PhysicalAvailableMemory 0.0000009313225746154785 | floor }} MiB avail"
+          "template": " \ue79d {{ mulf .PhysicalAvailableMemory 0.0000009313225746154785 | floor }} MiB"
         }
       ]
     }
