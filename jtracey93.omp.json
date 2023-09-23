@@ -2,8 +2,6 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "version": 2,
   "final_space": true,
-  "pwd": "osc99",
-  "shell_integration": true,
   "blocks": [
     {
       "type": "prompt",
@@ -60,35 +58,38 @@
         {
           "type": "status",
           "style": "diamond",
-          "trailing_diamond": "\ue0b0",
           "foreground": "#ffffff",
           "background": "#0095e9",
           "background_templates": [
             "{{ if gt .Code 0 }}#ff0044{{ end }}"
           ],
+          "trailing_diamond": "\ue0b0",
           "template": " \uf0e7 ",
           "properties": {
             "always_enabled": true
           }
         }
       ]
-    }, {
+    },
+    {
       "type": "rprompt",
       "segments": [
         {
           "type": "executiontime",
           "style": "diamond",
-          "leading_diamond": "\ue0b6</>",
-          "trailing_diamond": "\ue0b4",
           "foreground": "#3f3f3f",
           "background": "#ffff00",
+          "leading_diamond": "\ue0b6</>",
+          "trailing_diamond": "\ue0b4",
           "template": "\uf252 {{ .FormattedMs }} ",
           "properties": {
-            "style": "austin",
-            "always_enabled": true
+            "always_enabled": true,
+            "style": "austin"
           }
         }
       ]
     }
-  ]
+  ],
+  "shell_integration": true,
+  "pwd": "osc99"
 }
