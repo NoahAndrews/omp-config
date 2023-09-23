@@ -80,12 +80,19 @@
           "foreground": "#3f3f3f",
           "background": "#ffff00",
           "leading_diamond": "\ue0b6</>",
-          "trailing_diamond": "\ue0b4",
           "template": "\uf252 {{ .FormattedMs }} ",
           "properties": {
             "always_enabled": true,
             "style": "austin"
           }
+        },
+        {
+          "type": "sysinfo",
+          "style": "diamond",
+          "foreground": "#3f3f3f",
+          "background": "#2ADF4E",
+          "trailing_diamond": "\ue0b4",
+          "template": " \ue79d {{ mulf .PhysicalAvailableMemory 0.0000009313225746154785 | floor }} MiB avail"
         }
       ]
     }
